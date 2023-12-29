@@ -18,12 +18,30 @@ awk -F';' '{count[$6]+=1} END {for (driver in count) print driver ";" count[driv
 sort -t';' -k2,2 -n -r temp/temp2.csv > temp/finaltemp.csv
 
 # Récupérer les 10 premiers conducteurs ayant effectué le plus grand nombre de trajets
-longest_10_drivers=$(head -n 10 temp/finaltemp.csv)
+head -n 10 temp/finaltemp.csv > temp/top_10_drivers.txt
+
+# Générer le graphique avec gnuplot
+gnuplot <<EOF
+set term png
+set output 'top_10_drivers.png'
+set title "Top 10 Conducteurs avec le Plus de Trajets"
+set xlabel "Nombre de Trajets"
+set ylabel "Conducteurs"
+set style data histogram
+set style histogram rowstacked
+set style fill solid border -1
+set boxwidth 0.5
+set yrange [0.5:10.5]  # Ajustement de la plage y
+set ytics out
+plot 'temp/top_10_drivers.txt' using 2:xticlabels(1) with boxes title "Nombre de Trajets"
+EOF
+
+# Afficher les 10 conducteurs avec le plus de trajets
 echo "Les 10 conducteurs avec le plus de trajets sont : "
-echo "$longest_10_drivers"
+cat temp/top_10_drivers.txt
 
 # Nettoyer les fichiers temporaires
-rm temp/temp.csv temp/finaltemp.csv temp/temp2.csv
+rm temp/temp.csv temp/temp2.csv
 
 # Timestamp de fin
 heure_fin=$(date +%s)
