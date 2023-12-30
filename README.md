@@ -3,6 +3,14 @@
 # Instructions pour compiler
 
 
+rajouter ce qui faut installer ce qui faut ecrire pour executer mettre des images pour faire des exemples 
+
+
+
+
+
+
+
 
 
 
