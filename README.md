@@ -31,5 +31,8 @@ rajouter ce qui faut installer ce qui faut ecrire pour executer mettre des image
 |                                                                 | -> Gestion des erreurs dans la globalité des erreurs
 |                                                                 | -> Réaliser ensemble les traitements où nous avons rencontré des difficultés
 |                                                                 | -> Readme
-         
+
+
+## Planning de réalisation 
+
 
