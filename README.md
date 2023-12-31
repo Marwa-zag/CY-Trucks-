@@ -35,4 +35,13 @@ rajouter ce qui faut installer ce qui faut ecrire pour executer mettre des image
 
 ## Planning de réalisation 
 
+* 06/12/2023 : Lancement du projet, c'est-à-dire comprendre les consignes du projet. Découverte du fichier data.csv et compréhension du fichier.
+* 13/12/2023 : Commencement du projet, essayez de créer les dossiers etc... (mais ce n'était pas au top)
+* 17/12/2023 : Réussit à creer les fichiers temp, images, data, demo, progc. Commencement du traitement d1
+* 20/12/2023 : On arrive pas à afficher le graphique du traitement d1. Les données sont correct mais il y a une erreur dans l'affichage.
+* 28/12/2023 : Le même problème persiste. Je suis passée au traitement d2. Le même problème aussi au niveau du graphique mais les données sont correct.
+* 29/12/2023 : Readme + porblème affichage de la fonction aide.
+* 30/12/2023 : toujours en train de régler les problèmes.
+* 
+
 
