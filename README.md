@@ -45,9 +45,9 @@ rajouter ce qui faut installer ce qui faut ecrire pour executer mettre des image
 * 
 ## Ce qu'il reste à faire
 **Script Shell :**
--[ ] Prendre en paramètres le chemin du fichier CSV d'entrée et les choix de traitement.
--[ ] Afficher un message d'aide si l'argument -h est présent.
--[ ] Vérifier la présence de l'exécutable C sur le disque, le compiler si nécessaire, et traiter les erreurs.
+- [ ] Prendre en paramètres le chemin du fichier CSV d'entrée et les choix de traitement.
+- [ ] Afficher un message d'aide si l'argument -h est présent.
+- [ ] Vérifier la présence de l'exécutable C sur le disque, le compiler si nécessaire, et traiter les erreurs.
 - [ ] Vérifier la présence des dossiers temp et images, les créer s'ils n'existent pas.
 - [ ] Vider le dossier temp avant l'exécution des traitements.
 - [x] Afficher la durée de chaque traitement en secondes.
