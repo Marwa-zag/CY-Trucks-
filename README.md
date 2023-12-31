@@ -43,5 +43,31 @@ rajouter ce qui faut installer ce qui faut ecrire pour executer mettre des image
 * 29/12/2023 : Readme + porblème affichage de la fonction aide.
 * 30/12/2023 : toujours en train de régler les problèmes.
 * 
+## Ce qu'il reste à faire
+**Script Shell :**
+-[] Prendre en paramètres le chemin du fichier CSV d'entrée et les choix de traitement.
+-[] Afficher un message d'aide si l'argument -h est présent.
+-[] Vérifier la présence de l'exécutable C sur le disque, le compiler si nécessaire, et traiter les erreurs.
+-[] Vérifier la présence des dossiers temp et images, les créer s'ils n'existent pas.
+-[] Vider le dossier temp avant l'exécution des traitements.
+-[x] Afficher la durée de chaque traitement en secondes.
+-[] Créer un graphique à partir des résultats obtenus du programme C.
+-[] Traitements possibles :
+   -[x] **D1** Conducteurs avec le plus de trajets :
+   -[] créer un histogramme horizontal du -d1.
+   -[x] **D2** Conducteurs et la plus grande distance :
+   -[] créer un histogramme horizontal du -d2.
+   -[] **L** Les 10 trajets les plus longs : 
+   -[] créer un histogramme vertical du -l.
+   -[] **T** Les 10 villes les plus traversées : créer un histogramme regroupé.
+   -[] **S** Statistiques sur les étapes : créer un graphique de courbes min-max-moyenne.
+
+**Programme C :**
+-[] Compiler le programme C avec un Makefile.
+-[] Définir les fonctionnalités du programme C en fonction des besoins du script Shell.
+-[] Prendre en charge les fichiers d'entrée et de sortie en tant qu'arguments (ou lire depuis l'entrée standard/sortie standard).
+-[] Retourner un code d'erreur strictement positif en cas de problème, 0 sinon.
+-[] Assurer la robustesse du code, libérer les allocations mémoires dans le cas nominal.
+-[] Limiter la taille mémoire utilisée en définissant des structures avec une empreinte minimale.
 
 
