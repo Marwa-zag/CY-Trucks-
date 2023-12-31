@@ -35,20 +35,21 @@ rajouter ce qui faut installer ce qui faut ecrire pour executer mettre des image
 
 ## Planning de réalisation 
 
-* 06/12/2023 : Lancement du projet, c'est-à-dire comprendre les consignes du projet. Découverte du fichier data.csv et compréhension du fichier.
-* 13/12/2023 : Commencement du projet, essayez de créer les dossiers etc... (mais ce n'était pas au top)
-* 17/12/2023 : Réussit à creer les fichiers temp, images, data, demo, progc. Commencement du traitement d1
-* 20/12/2023 : On arrive pas à afficher le graphique du traitement d1. Les données sont correct mais il y a une erreur dans l'affichage.
-* 28/12/2023 : Le même problème persiste. Je suis passée au traitement d2. Le même problème aussi au niveau du graphique mais les données sont correct.
-* 29/12/2023 : Readme + porblème affichage de la fonction aide.
-* 30/12/2023 : toujours en train de régler les problèmes.
+* 06/12/2023 : Lancement du projet, c'est-à-dire comprendre les consignes du projet. Découverte du fichier data.csv et compréhension du fichier. (mariam et marwa)
+* 13/12/2023 : Commencement du projet, essayez de créer les dossiers etc... (mais ce n'était pas au top) (mariam et marwa)
+* 17/12/2023 : Réussit à creer les fichiers temp, images, data, demo, progc. Commencement du traitement d1 (mariam et marwa)
+* 20/12/2023 : On arrive pas à afficher le graphique du traitement d1. Les données sont correct mais il y a une erreur dans l'affichage. (mariam et marwa)
+* 28/12/2023 : Le même problème persiste. Je suis passée au traitement d2. Le même problème aussi au niveau du graphique mais les données sont correct.(marwa)
+* 29/12/2023 : Readme + porblème affichage de la fonction aide. (marwa)
+* 30/12/2023 : toujours en train de régler les problèmes. (marwa)
+* 31/12/2023 : Le problème avec la fonction d'affichage d'aide est réglé. (marwa)
 * 
 ## Ce qu'il reste à faire
 **Script Shell :**
 - [ ] Prendre en paramètres le chemin du fichier CSV d'entrée et les choix de traitement.
-- [ ] Afficher un message d'aide si l'argument -h est présent.
+- [x] Afficher un message d'aide si l'argument -h est présent.
 - [ ] Vérifier la présence de l'exécutable C sur le disque, le compiler si nécessaire, et traiter les erreurs.
-- [ ] Vérifier la présence des dossiers temp et images, les créer s'ils n'existent pas.
+- [x] Vérifier la présence des dossiers temp et images, les créer s'ils n'existent pas.
 - [ ] Vider le dossier temp avant l'exécution des traitements.
 - [x] Afficher la durée de chaque traitement en secondes.
 - [ ] Créer un graphique à partir des résultats obtenus du programme C.
