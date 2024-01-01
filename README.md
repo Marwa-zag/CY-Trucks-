@@ -43,6 +43,7 @@ rajouter ce qui faut installer ce qui faut ecrire pour executer mettre des image
 * 29/12/2023 : Readme + porblème affichage de la fonction aide. (marwa)
 * 30/12/2023 : toujours en train de régler les problèmes. (marwa)
 * 31/12/2023 : Le problème avec la fonction d'affichage d'aide est réglé. (marwa)
+* 01/01/2024 : Traitement l fait et l'affichage du graphique est correct. (Il faut corriger l'affichage du fichier txt et le temps d'exécution) (marwa)
 * 
 ## Ce qu'il reste à faire
 **Script Shell :**
@@ -58,8 +59,8 @@ rajouter ce qui faut installer ce qui faut ecrire pour executer mettre des image
    - [ ] créer un histogramme horizontal du -d1.
    - [x] **D2** Conducteurs et la plus grande distance :
    - [ ] créer un histogramme horizontal du -d2.
-   - [ ] **L** Les 10 trajets les plus longs : 
-   - [ ] créer un histogramme vertical du -l.
+   - [x] **L** Les 10 trajets les plus longs : (corriger le problème avec l'id route et la distance les colonnes du fichier s'affiche pas dans le même ordre que le prof)
+   - [x] créer un histogramme vertical du -l.
    - [ ] **T** Les 10 villes les plus traversées : créer un histogramme regroupé.
    - [ ] **S** Statistiques sur les étapes : créer un graphique de courbes min-max-moyenne.
 
