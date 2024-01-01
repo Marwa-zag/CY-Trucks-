@@ -20,6 +20,13 @@ check_and_create_directories() {
             echo "Le dossier $dir existe déjà."
         fi
     done
+
+    # Vider le dossier temp s'il existe déjà
+    if [ -d "$temp_dir" ]; then
+        echo "Le dossier $temp_dir existe déjà, nettoyage en cours..."
+        rm -rf "$temp_dir"/*
+        echo "Nettoyage du dossier $temp_dir terminé."
+    fi
 }
 
 # Fonction pour compiler le programme C
