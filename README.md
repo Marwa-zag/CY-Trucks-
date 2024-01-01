@@ -71,5 +71,7 @@ rajouter ce qui faut installer ce qui faut ecrire pour executer mettre des image
 - [ ] Retourner un code d'erreur strictement positif en cas de problème, 0 sinon.
 - [ ] Assurer la robustesse du code, libérer les allocations mémoires dans le cas nominal.
 - [ ] Limiter la taille mémoire utilisée en définissant des structures avec une empreinte minimale.
+- [ ] **T** Les 10 villes les plus traversées : créer un histogramme regroupé.
+- [ ] **S** Statistiques sur les étapes : créer un graphique de courbes min-max-moyenne.
 
 
