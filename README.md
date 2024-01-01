@@ -50,7 +50,7 @@ rajouter ce qui faut installer ce qui faut ecrire pour executer mettre des image
 - [x] Afficher un message d'aide si l'argument -h est présent.
 - [ ] Vérifier la présence de l'exécutable C sur le disque, le compiler si nécessaire, et traiter les erreurs.
 - [x] Vérifier la présence des dossiers temp et images, les créer s'ils n'existent pas.
-- [ ] Vider le dossier temp avant l'exécution des traitements.
+- [x] Vider le dossier temp avant l'exécution des traitements.
 - [x] Afficher la durée de chaque traitement en secondes.
 - [ ] Créer un graphique à partir des résultats obtenus du programme C.
 - [ ] Traitements possibles :
