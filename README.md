@@ -44,6 +44,7 @@ rajouter ce qui faut installer ce qui faut ecrire pour executer mettre des image
 * 30/12/2023 : toujours en train de régler les problèmes. (marwa)
 * 31/12/2023 : Le problème avec la fonction d'affichage d'aide est réglé. (marwa)
 * 01/01/2024 : Traitement l fait et l'affichage du graphique est correct. (Il faut corriger l'affichage du fichier txt et le temps d'exécution) (marwa)
+* 03/01/2024 : Traitement -d1 réssuit le graphique s'affiche correctement (il faut juste afficher le prénome en même temps que le nom) + commencement du traitement s (marwa)
 * 
 ## Ce qu'il reste à faire
 **Script Shell :**
@@ -56,7 +57,7 @@ rajouter ce qui faut installer ce qui faut ecrire pour executer mettre des image
 - [ ] Créer un graphique à partir des résultats obtenus du programme C.
 - [ ] Traitements possibles :
    - [x] **D1** Conducteurs avec le plus de trajets :
-   - [ ] créer un histogramme horizontal du -d1.
+   - [x] créer un histogramme horizontal du -d1. (manque juste à afficher le prénom en meme temps que le nom)
    - [x] **D2** Conducteurs et la plus grande distance :
    - [ ] créer un histogramme horizontal du -d2.
    - [x] **L** Les 10 trajets les plus longs : (corriger le problème avec l'id route et la distance les colonnes du fichier s'affiche pas dans le même ordre que le prof)
