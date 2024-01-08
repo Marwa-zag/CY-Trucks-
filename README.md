@@ -55,6 +55,7 @@ rajouter ce qui faut installer ce qui faut ecrire pour executer mettre des image
 - [x] Vider le dossier temp avant l'exécution des traitements.
 - [x] Afficher la durée de chaque traitement en secondes.
 - [ ] Créer un graphique à partir des résultats obtenus du programme C.
+- [ ] Regrouper les traitements effectuern dans le menu principale 
 - [ ] Traitements possibles :
    - [x] **D1** Conducteurs avec le plus de trajets :
    - [x] créer un histogramme horizontal du -d1. (manque juste à afficher le prénom en meme temps que le nom)
