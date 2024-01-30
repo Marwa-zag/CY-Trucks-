@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Vérifier le nombre d'arguments
+if [ "$#" -lt 1 ]; then
+    echo "Usage: $0 chemin_du_fichier_CSV"
+    exit 1
+fi
+
 # Chemin du fichier CSV (premier argument du script)
 csv_file="$1"
 top_file="temp/top_10_driver_distances.csv"

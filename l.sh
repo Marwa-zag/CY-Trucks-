@@ -18,6 +18,7 @@ echo "Traitement distances..."
 # Utiliser awk pour calculer les distances et les stocker dans un fichier temporaire
 awk -F';' '{ distances[$1] += $5 } END { for (route_id in distances) print distances[route_id], route_id }' "$csv_file" | sort -k1,1nr | head -n 10 | sort -k2,2nr > "$top_distances_file"
 
+
 # Générer le graphique avec gnuplot
 gnuplot -persist <<EOF
 set terminal pngcairo enhanced font 'arial,10' size 700, 600
