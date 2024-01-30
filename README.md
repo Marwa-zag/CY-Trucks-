@@ -51,6 +51,7 @@ rajouter ce qui faut installer ce qui faut ecrire pour executer mettre des image
 * 17/01/2024 : Reprise du traitement t, premier essaie mais erreur. (mariam et marwa)
 * 27/01/2024 : Traitement t, il y a un problème il trie tous le fichier. (marwa)
 * 28/01/2024 : Toujours sur traitement t. (marwa)
+* 29/01/2024 : Je n'arrive pas à trouver mon erreur concernant du traitement t. 
 ## Ce qu'il reste à faire
 **Script Shell :**
 - [ ] Prendre en paramètres le chemin du fichier CSV d'entrée et les choix de traitement.
