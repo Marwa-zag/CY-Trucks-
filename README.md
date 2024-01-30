@@ -46,6 +46,11 @@ rajouter ce qui faut installer ce qui faut ecrire pour executer mettre des image
 * 01/01/2024 : Traitement l fait et l'affichage du graphique est correct. (Il faut corriger l'affichage du fichier txt et le temps d'exécution) (marwa)
 * 03/01/2024 : Traitement -d1 réssuit le graphique s'affiche correctement (il faut juste afficher le prénom en même temps que le nom) + commencement du traitement s (marwa)
 * 04/01/2024 : Traitement -d2 réussit le graphique s'affiche correctement. (il faut juste afficher le prénom en même temps que le nom + le temsp d'execution). J'ai apporté quelque modif au -l mais le temps reste aussi long.
+* 10/01/2024 : Commence de la structure du traitement t.
+* 13/01/2024 : Déblocage des bugs de d2 et l. (marwa)
+* 17/01/2024 : Reprise du traitement t, premier essaie mais erreur. (mariam et marwa)
+* 27/01/2024 : Traitement t, il y a un problème il trie tous le fichier. (marwa)
+* 28/01/2024 : Toujours sur traitement t. (marwa)
 ## Ce qu'il reste à faire
 **Script Shell :**
 - [ ] Prendre en paramètres le chemin du fichier CSV d'entrée et les choix de traitement.
