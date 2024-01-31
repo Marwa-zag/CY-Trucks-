@@ -1,0 +1,21 @@
+CC = gcc
+CFLAGS = -Wall -Wextra -std=c99
+LDFLAGS =
+
+CIBLE = avl_test
+
+SRCS = avl_t_ctest.c avl_t_test.h main.c
+OBJS = $(SRCS:.c=.o)
+
+.PHONY: all clean
+
+all: $(CIBLE)
+
+$(CIBLE): $(OBJS)
+	$(CC) $(CFLAGS) $(LDFLAGS) $^ -o $@
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+clean:
+	rm -f $(OBJS) $(CIBLE)
