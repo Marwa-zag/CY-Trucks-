@@ -87,10 +87,15 @@ rajouter ce qui faut installer ce qui faut ecrire pour executer mettre des image
 - [ ] **S** Statistiques sur les étapes : créer un graphique de courbes min-max-moyenne.
 
 ** Aperçu du projet: **
-- Traitement D2![top_10_driver_distances](https://github.com/Marwa-zag/CY-Trucks-/assets/131532539/2df92570-9325-4b9a-92ce-0fb074d6841d)
--Traitemnt L: ![traitement_l](https://github.com/Marwa-zag/CY-Trucks-/assets/131532539/651d2c88-fd7d-40e7-8fac-1d3e7a37c087)
--Traitement D1   ![top_10_drivers](https://github.com/Marwa-zag/CY-Trucks-/assets/131532539/98330d24-6d9a-4e27-ac16-f9ed8cd70c10)
-![traitement_l](https://github.com/Marwa-zag/CY-Trucks-/assets/131532539/e2d42320-beaf-4451-bcf9-12116c0fd628)
+- Traitement D2
+  ![top_10_driver_distances](https://github.com/Marwa-zag/CY-Trucks-/assets/131532539/2df92570-9325-4b9a-92ce-0fb074d6841d)
+
+-Traitement L:
+![traitement_l](https://github.com/Marwa-zag/CY-Trucks-/assets/131532539/651d2c88-fd7d-40e7-8fac-1d3e7a37c087)
+
+-Traitement D1 
+![top_10_drivers](https://github.com/Marwa-zag/CY-Trucks-/assets/131532539/98330d24-6d9a-4e27-ac16-f9ed8cd70c10)
+
 
 
   
