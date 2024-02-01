@@ -54,6 +54,7 @@ rajouter ce qui faut installer ce qui faut ecrire pour executer mettre des image
 * 29/01/2024 : Je n'arrive pas à trouver mon erreur concernant du traitement t. (marwa)
 * 30/01/2024 : Enorme difficulté avec le traitement t il m'affiche des valeurs mais pas les mêmes que les résultats. (marwa)
 * 31/01/2024 : On a commencé le traitement s on a eu quelques resultats mais les valeurs ne correspondent pas. (marwa et mariam) J'ai reussis à faire afficher une petite partie du graphique malgré le problème avec les données. (marwa)
+* 01/02/2024 : On a refait le menu principal on y a rajouté le traitement -d1 -d2 -l -t -s en shell. (marwa et mariam) On essaye de trouver l'erreur du code en c du traitement t et s. ( marwa et mariam)
 * 
 ## Ce qu'il reste à faire
 **Script Shell :**
