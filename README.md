@@ -4,7 +4,17 @@ En tant que responsables d'une société nationale de transport routier, nous di
 
 # Instructions pour compiler
 - Si vous utilisez les systèmes Ubuntu ou bien Debian, veuillez mettre à jour la liste des paquets disponibles à partir des dépôts logiciels configurés sur votre système :
-          `sudo apt-get update`
+
+
+                            `sudo apt-get update`
+
+  - Pour mettre en oeuvre Cy trucks,  vous aurez besoin de quelques outils dans votre terminal :
+
+                               `sudo apt-get install gnuplot`
+                               `sudo apt-get install gnuplot`
+                               `sudo apt-get install make`
+                               `sudo apt-get install imagemagick`
+                               `sudo apt-get install dos2unix`
 
 
 
