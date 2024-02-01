@@ -1,9 +1,13 @@
 # CY-Trucks-
 
+En tant que responsables d'une société nationale de transport routier, nous disposons d'un outil de gestion logistique. Cependant, les données recueillies sont bien trop volumineuses et mélangées pour être traitées manuellement. Notre objectif est donc de développer un programme afin de présenter de manière globale les activités de Cy Trucks, en fournissant des analyses claires et des graphiques récapitulatifs pour faciliter la compréhension de notre activité logistique.
+
 # Instructions pour compiler
+- Si vous utilisez les systèmes Ubuntu ou bien Debian, veuillez mettre à jour la liste des paquets disponibles à partir des dépôts logiciels configurés sur votre système :
+          `sudo apt-get update`
 
 
-rajouter ce qui faut installer ce qui faut ecrire pour executer mettre des images pour faire des exemples 
+
 
 
 
@@ -87,21 +91,21 @@ rajouter ce qui faut installer ce qui faut ecrire pour executer mettre des image
 - [ ] **T** Les 10 villes les plus traversées : créer un histogramme regroupé.
 - [ ] **S** Statistiques sur les étapes : créer un graphique de courbes min-max-moyenne.
 
-** Aperçu du projet: **
-- Traitement D2
+## Aperçu du projet: 
+#### Traitement D2
   ![top_10_driver_distances](https://github.com/Marwa-zag/CY-Trucks-/assets/131532539/2df92570-9325-4b9a-92ce-0fb074d6841d)
 
--Traitement L:
+#### Traitement L:
 ![traitement_l](https://github.com/Marwa-zag/CY-Trucks-/assets/131532539/651d2c88-fd7d-40e7-8fac-1d3e7a37c087)
 
--Traitement D1 
+#### Traitement D1 
 ![top_10_drivers](https://github.com/Marwa-zag/CY-Trucks-/assets/131532539/98330d24-6d9a-4e27-ac16-f9ed8cd70c10)
 
 
 
   
 
-**Difficultés rencontrées : **
+## Difficultés rencontrées : 
 - Nous avons eu du mal a exécuter et compiler les traitemntrs T et S.
 - Les traitements D2 et L fonctionnement mais ne respectent pas vraiment les 7 secondes ( à tester sur un ordinateur plus performent le temps sera sans doute respecté)
   
