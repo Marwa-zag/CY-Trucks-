@@ -16,6 +16,18 @@ En tant que responsables d'une société nationale de transport routier, nous di
                                `sudo apt-get install imagemagick`(ImageMagick est utilisé pour manipuler des images, générer des graphiques)
                                `sudo apt-get install dos2unix` (dos2unix est un utilitaire qui convertit les fins de ligne des fichiers texte entre les formats DOS et Unix )
 
+  ## Différents traitements disponible :
+
+  -
+
+
+
+  ## Apercu de l'affichage help :
+
+  -Afin d'afficher la fonction d'aide, il suffit d'éxecuter sur le terminal `./CyTrucks.sh -h`
+
+ ( mettre une photo)
+
 
 
 
@@ -93,22 +105,38 @@ En tant que responsables d'une société nationale de transport routier, nous di
 - [ ] **T** Les 10 villes les plus traversées : créer un histogramme regroupé.
 - [ ] **S** Statistiques sur les étapes : créer un graphique de courbes min-max-moyenne.
 
-## Aperçu du projet: 
+## Aperçu des traitements : 
+
+- Pour lancer le traitement -d1, vous devez saisir votre terminal `./CyTrucks.sh data.csv -d1` (il s'affiche entre 3 à 15 secondes)
+#### Traitement D1 
+![top_10_drivers](https://github.com/Marwa-zag/CY-Trucks-/assets/131532539/98330d24-6d9a-4e27-ac16-f9ed8cd70c10)
+
+- Pour lancer le traitement -d2, vous devez saisir votre terminal `./CyTrucks.sh data.csv -d2` (il s'affiche au bout de 30 secondes)
 #### Traitement D2
   ![top_10_driver_distances](https://github.com/Marwa-zag/CY-Trucks-/assets/131532539/2df92570-9325-4b9a-92ce-0fb074d6841d)
 
+Pour lancer le traitement -l, vous devez saisir votre terminal `./CyTrucks.sh data.csv -l` (il s'affiche au bout de 40 secondes)
 #### Traitement L:
 ![traitement_l](https://github.com/Marwa-zag/CY-Trucks-/assets/131532539/651d2c88-fd7d-40e7-8fac-1d3e7a37c087)
 
-#### Traitement D1 
-![top_10_drivers](https://github.com/Marwa-zag/CY-Trucks-/assets/131532539/98330d24-6d9a-4e27-ac16-f9ed8cd70c10)
+Pour lancer le traitement -t, vous devez saisir votre terminal `./CyTrucks.sh data.csv -t`
+#### Traitement t : 
+
+Pour lancer le traitement -s, vous devez saisir votre terminal `./CyTrucks.sh data.csv -s`
+#### Traitement s: 
+
+
 
 
 
   
 
 ## Difficultés rencontrées : 
-- Nous avons eu du mal a exécuter et compiler les traitemntrs T et S.
-- Les traitements D2 et L fonctionnement mais ne respectent pas vraiment les 7 secondes ( à tester sur un ordinateur plus performent le temps sera sans doute respecté)
+
+- Avant de commencer les traitements, nous avons mit un certain temps avant de comprendre le fichiers data.csv
+- Nous avons eu du mal a exécuter et compiler les traitemntrs T et S. Nous avons eu du mal à collecter les bonnes données.
+- Les traitements D2 et L fonctionnement mais ne respectent pas vraiment les 7 secondes ( à tester sur un ordinateur plus performent le temps sera sans doute respecté).
+- Nous avons eu du mal à générer les graphiques, nous avons puis seulement afficher les noms de familles sur le graphique d1 et d2.
+- Le traitement s met énormément de temps pour s'éxecuter.
   
 
