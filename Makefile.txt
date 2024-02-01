@@ -1,17 +1,24 @@
 CC = gcc
-CFLAGS = -Wall -Wextra
-LIBS = -lm
-EXECUTABLE = traitement_t
+CFLAGS = -Wall -Wextra -std=c99
+LDFLAGS = -lm
 
-all: $(EXECUTABLE)
+TARGET = projet_info
 
-$(EXECUTABLE): main.c AVL_t.c AVL_t.h
-	$(CC) $(CFLAGS) -o $@ main.c AVL_t.c $(LIBS)
+SRCS = arbre.c main.c
+OBJS = $(SRCS:.c=.o)
+
+all: $(TARGET)
+
+$(TARGET): $(OBJS)
+	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c -o $@ $<
+
+main.o: main.c arbre.h
+	$(CC) $(CFLAGS) -c -o $@ $<
 
 clean:
-	rm -f $(EXECUTABLE)
+	rm -f $(OBJS) $(TARGET)
 
-
-
-
-
+.PHONY: all clean
