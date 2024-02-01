@@ -86,4 +86,13 @@ rajouter ce qui faut installer ce qui faut ecrire pour executer mettre des image
 - [ ] **T** Les 10 villes les plus traversées : créer un histogramme regroupé.
 - [ ] **S** Statistiques sur les étapes : créer un graphique de courbes min-max-moyenne.
 
+** Aperçu du projet: **
+- Traitement D1
+
+  
+
+**Difficultés rencontrées : **
+- Nous avons eu du mal a exécuter et compiler les traitemntrs T et S.
+- Les traitements D2 et L fonctionnement mais ne respectent pas vraiment les 7 secondes ( à tester sur un ordinateur plus performent le temps sera sans doute respecté)
+  
 
