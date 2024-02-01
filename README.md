@@ -18,12 +18,12 @@ En tant que responsables d'une société nationale de transport routier, nous di
 
   ## Différents traitements disponible :
 
-  -d1: Affiche les 10 premiers conducteurs avec le plus de trajets.
-  -d2: Affiche les 10 premiers conducteurs avec la plus grande distance parcourue.
-  -l: Montre les 10 trajets les plus longs.
-  -t: Liste les 10 villes les plus traversées.
-  -s: Génère des statistiques sur les étapes.
-  -h: Affiche l'aide, expliquant les options disponibles.
+  - d1: Affiche les 10 premiers conducteurs avec le plus de trajets.
+  - d2: Affiche les 10 premiers conducteurs avec la plus grande distance parcourue.
+  - l: Montre les 10 trajets les plus longs.
+  - t: Liste les 10 villes les plus traversées.
+  - s: Génère des statistiques sur les étapes.
+  - h: Affiche l'aide, expliquant les options disponibles.
 
   ## Apercu de la création des différents dossiers:
 
@@ -33,7 +33,7 @@ En tant que responsables d'une société nationale de transport routier, nous di
 
   ## Apercu de l'affichage help :
 
-  -Afin d'afficher la fonction d'aide, il suffit d'éxecuter sur le terminal `./CyTrucks.sh -h`
+  - Afin d'afficher la fonction d'aide, il suffit d'éxecuter sur le terminal `./CyTrucks.sh -h`
 
  ( mettre une photo)
 
