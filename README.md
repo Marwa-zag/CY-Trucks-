@@ -8,21 +8,13 @@ En tant que responsables d'une société nationale de transport routier, nous di
 
                             `sudo apt-get update`
 
-  - Pour mettre en oeuvre Cy trucks,  vous aurez besoin de quelques outils dans votre terminal :
+- Pour mettre en oeuvre Cy trucks,  vous aurez besoin de quelques outils dans votre terminal :
 
-                               `sudo apt-get install gnuplot`
-                               `sudo apt-get install gnuplot`
-                               `sudo apt-get install make`
-                               `sudo apt-get install imagemagick`
-                               `sudo apt-get install dos2unix`
-
-
-
-
-
-
-
-
+                               `sudo apt-get install gnuplot`(Gnuplot est utilisé pour générer des graphiques à partir des données)
+                               `sudo apt-get install build-essential` (Pour compiler le programme en C, vous aurez besoin d'un compilateur C)
+                               `sudo apt-get install make` ( utiliser l'utilitaire Make)
+                               `sudo apt-get install imagemagick`(ImageMagick est utilisé pour manipuler des images, générer des graphiques)
+                               `sudo apt-get install dos2unix` (dos2unix est un utilitaire qui convertit les fins de ligne des fichiers texte entre les formats DOS et Unix )
 
 
 
