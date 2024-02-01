@@ -53,7 +53,7 @@ rajouter ce qui faut installer ce qui faut ecrire pour executer mettre des image
 * 28/01/2024 : Toujours sur traitement t. (marwa)
 * 29/01/2024 : Je n'arrive pas à trouver mon erreur concernant du traitement t. (marwa)
 * 30/01/2024 : Enorme difficulté avec le traitement t il m'affiche des valeurs mais pas les mêmes que les résultats. (marwa)
-* 31/01/2024 : On a commencé le traitement s on a eu quelques resultats mais les valeurs ne correspondent pas. (marwa et mariam)
+* 31/01/2024 : On a commencé le traitement s on a eu quelques resultats mais les valeurs ne correspondent pas. (marwa et mariam) J'ai reussis à faire afficher une petite partie du graphique malgré le problème avec les données. (marwa)
 * 
 ## Ce qu'il reste à faire
 **Script Shell :**
