@@ -157,7 +157,8 @@ Pour lancer le traitement -s, vous devez saisir votre terminal `./CyTrucks.sh da
 ## Remarques: 
 - Pour le traitement S, dans le programme s'il affiche erreur lors de l'ouverture du fichier, il ne faut pas prendre en compte cette annotation car il execute tout de même le traitement.
 - En fonction de chaque traitement, le code génère des fichiers dans le dossiers temp où il y a les résultats attendus .
-- Lorsque l'on execute les options -d1, -d2, -l, nous avons les résultats sur le terminal, il faut ainsi aller dans le dossier image pour voir les résulats du graphique. 
+- Lorsque l'on execute les options -d1, -d2, -l, nous avons les résultats sur le terminal, il faut ainsi aller dans le dossier image pour voir les résulats du graphique.
+  
 ## Difficultés rencontrées : 
 
 - Avant de commencer les traitements, nous avons mit un certain temps avant de comprendre le fichiers data.csv
@@ -170,6 +171,10 @@ Pour lancer le traitement -s, vous devez saisir votre terminal `./CyTrucks.sh da
 
 - A deux c'était compliqué de réaliser tous les traitements, la partie graphique avec gnu plot ... , autrement dit tout le projet en amont des partiels mais nous avons réussis à bien nous répartir les     tâches et travailler dans les temps.
 - - Les traitements et options affichent bien ce qui a été demandée.
-- Les traitements -t et -s ont éte les plus durs à réaliser mais nous avons finalement réussis à les programmer. 
+- Les traitements -t et -s ont éte les plus durs à réaliser mais nous avons finalement réussis à les programmer.
+
+  ## Sources :
+  - Vidéos youtube pour gnu plot.
+  - TD et CM pour les différentes fonctions des traitements tels que les AVL, les différentes rotations, Shell...
   
 
