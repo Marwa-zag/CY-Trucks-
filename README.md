@@ -1,4 +1,7 @@
 # CY-Trucks-
+Mariam Kardallas
+Marwa ZAGLIZ
+Préing2 MEF1
 
 En tant que responsables d'une société nationale de transport routier, nous disposons d'un outil de gestion logistique. Cependant, les données recueillies sont bien trop volumineuses et mélangées pour être traitées manuellement. Notre objectif est donc de développer un programme afin de présenter de manière globale les activités de Cy Trucks, en fournissant des analyses claires et des graphiques récapitulatifs pour faciliter la compréhension de notre activité logistique.
 
@@ -15,6 +18,18 @@ En tant que responsables d'une société nationale de transport routier, nous di
                                `sudo apt-get install make` ( utiliser l'utilitaire Make)
                                `sudo apt-get install imagemagick`(ImageMagick est utilisé pour manipuler des images, générer des graphiques)
                                `sudo apt-get install dos2unix` (dos2unix est un utilitaire qui convertit les fins de ligne des fichiers texte entre les formats DOS et Unix )
+
+  ## Consigne d'éxécution :
+
+ - Après avoir récupéré le dossier, donné lui les droits d'éxécution :
+
+                                `sudo chmod +x CyTrucks.sh`
+ - Ensuite :
+                                `sudo dos2unix CyTrucks.sh`
+
+   - Enfin :
+                                `./CyTrucks.sh` (à partir de là vous pouvez lui donner n'imporque quel traitement)
+  
 
   ## Différents traitements disponible :
 
