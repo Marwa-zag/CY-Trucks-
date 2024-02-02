@@ -149,9 +149,14 @@ Pour lancer le traitement -l, vous devez saisir votre terminal `./CyTrucks.sh da
 
 Pour lancer le traitement -t, vous devez saisir votre terminal `./CyTrucks.sh data.csv -t`
 #### Traitement t : 
+![traitement_t](https://github.com/Marwa-zag/CY-Trucks-/assets/131532539/dcab6e16-8a7e-42e7-90b2-189e44760bab)
+
 
 Pour lancer le traitement -s, vous devez saisir votre terminal `./CyTrucks.sh data.csv -s`
 #### Traitement s: 
+
+![traitement_s](https://github.com/Marwa-zag/CY-Trucks-/assets/131532539/8bf446db-44ce-487b-8ff5-690289da3db0)
+
 
 
 ## Remarques: 
