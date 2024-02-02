@@ -31,7 +31,8 @@ En tant que responsables d'une société nationale de transport routier, nous di
  - Enfin :
      
                                 `./CyTrucks.sh` (à partir de là vous pouvez lui donner n'imporque quel traitement)
-  
+
+   - Veuillez installer le fichier data.csv et le mettre dans le dossier projet_info afin qu'il marche.
 
   ## Différents traitements disponible :
 
