@@ -44,7 +44,7 @@ En tant que responsables d'une société nationale de transport routier, nous di
 
   ## Apercu de la création des différents dossiers:
 
-![Uploading creation_dossier.PNG…]()
+![Uploading creation_dossier.PNG.]()
 
 
 
@@ -53,7 +53,7 @@ En tant que responsables d'une société nationale de transport routier, nous di
 
   - Afin d'afficher la fonction d'aide, il suffit d'éxecuter sur le terminal `./CyTrucks.sh -h`
 
- ![Uploading fonction_aide.PNG…]()
+ ![Uploading fonction_aide.PNG.]()
 
 
 
