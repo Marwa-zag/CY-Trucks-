@@ -106,11 +106,11 @@ En tant que responsables d'une société nationale de transport routier, nous di
 **Script Shell :**
 - [x] Prendre en paramètres le chemin du fichier CSV d'entrée et les choix de traitement.
 - [x] Afficher un message d'aide si l'argument -h est présent.
-- [ ] Vérifier la présence de l'exécutable C sur le disque, le compiler si nécessaire, et traiter les erreurs.
+- [x] Vérifier la présence de l'exécutable C sur le disque, le compiler si nécessaire, et traiter les erreurs.
 - [x] Vérifier la présence des dossiers temp et images, les créer s'ils n'existent pas.
 - [x] Vider le dossier temp avant l'exécution des traitements.
 - [x] Afficher la durée de chaque traitement en secondes.
-- [ ] Créer un graphique à partir des résultats obtenus du programme C.
+- [x] Créer un graphique à partir des résultats obtenus du programme C.
 - [x] Regrouper les traitements effectuer dans le menu principale
 - [x] Dans le CyTrucks.sh mettre une fonction qui vérifie l'existence du fichier.csv
 - [x] Traitements possibles :
@@ -120,8 +120,8 @@ En tant que responsables d'une société nationale de transport routier, nous di
    - [x] créer un histogramme horizontal du -d2. (manque juste à afficher le prénom en meme temps que le nom + temps d'éxecution)
    - [x] **L** Les 10 trajets les plus longs : (corriger le problème avec l'id route et la distance, les chiffres après la virgule, les colonnes du fichier s'affiche pas dans le même ordre que le prof + temps d'éxecution)
    - [x] créer un histogramme vertical du -l.
-   - [ ] **T** Les 10 villes les plus traversées : créer un histogramme regroupé.
-   - [ ] **S** Statistiques sur les étapes : créer un graphique de courbes min-max-moyenne.
+   - [x] **T** Les 10 villes les plus traversées : créer un histogramme regroupé.
+   - [x] **S** Statistiques sur les étapes : créer un graphique de courbes min-max-moyenne.
 
 **Programme C :**
 - [ ] Compiler le programme C avec un Makefile.
@@ -130,8 +130,8 @@ En tant que responsables d'une société nationale de transport routier, nous di
 - [x] Retourner un code d'erreur strictement positif en cas de problème, 0 sinon.
 - [x] Assurer la robustesse du code, libérer les allocations mémoires dans le cas nominal.
 - [ ] Limiter la taille mémoire utilisée en définissant des structures avec une empreinte minimale.
-- [ ] **T** Les 10 villes les plus traversées : créer un histogramme regroupé.
-- [ ] **S** Statistiques sur les étapes : créer un graphique de courbes min-max-moyenne.
+- [x] **T** Les 10 villes les plus traversées : créer un histogramme regroupé.
+- [x] **S** Statistiques sur les étapes : créer un graphique de courbes min-max-moyenne.
 
 ## Aperçu des traitements : 
 
@@ -147,12 +147,12 @@ Pour lancer le traitement -l, vous devez saisir votre terminal `./CyTrucks.sh da
 #### Traitement L:
 ![traitement_l](https://github.com/Marwa-zag/CY-Trucks-/assets/131532539/651d2c88-fd7d-40e7-8fac-1d3e7a37c087)
 
-Pour lancer le traitement -t, vous devez saisir votre terminal `./CyTrucks.sh data.csv -t`
+Pour lancer le traitement -t, vous devez saisir votre terminal `./CyTrucks.sh data.csv -t` (il s'affiche au bout de 100 secondes)
 #### Traitement t : 
 ![traitement_t](https://github.com/Marwa-zag/CY-Trucks-/assets/131532539/dcab6e16-8a7e-42e7-90b2-189e44760bab)
 
 
-Pour lancer le traitement -s, vous devez saisir votre terminal `./CyTrucks.sh data.csv -s`
+Pour lancer le traitement -s, vous devez saisir votre terminal `./CyTrucks.sh data.csv -s` (il s'affiche au bout de 30 secondes)
 #### Traitement s: 
 
 ![traitement_s](https://github.com/Marwa-zag/CY-Trucks-/assets/131532539/8bf446db-44ce-487b-8ff5-690289da3db0)
