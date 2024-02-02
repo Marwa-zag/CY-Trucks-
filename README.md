@@ -25,9 +25,11 @@ En tant que responsables d'une société nationale de transport routier, nous di
 
                                 `sudo chmod +x CyTrucks.sh`
  - Ensuite :
+   
                                 `sudo dos2unix CyTrucks.sh`
 
    - Enfin :
+     
                                 `./CyTrucks.sh` (à partir de là vous pouvez lui donner n'imporque quel traitement)
   
 
