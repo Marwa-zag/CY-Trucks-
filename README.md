@@ -44,7 +44,8 @@ En tant que responsables d'une société nationale de transport routier, nous di
 
   ## Apercu de la création des différents dossiers:
 
-  (mettre une photo)
+![Uploading creation_dossier.PNG…]()
+
 
 
 
@@ -52,7 +53,8 @@ En tant que responsables d'une société nationale de transport routier, nous di
 
   - Afin d'afficher la fonction d'aide, il suffit d'éxecuter sur le terminal `./CyTrucks.sh -h`
 
- ( mettre une photo)
+ ![Uploading fonction_aide.PNG…]()
+
 
 
 
@@ -99,19 +101,19 @@ En tant que responsables d'une société nationale de transport routier, nous di
 * 30/01/2024 : Enorme difficulté avec le traitement t il m'affiche des valeurs mais pas les mêmes que les résultats. (marwa)
 * 31/01/2024 : On a commencé le traitement s on a eu quelques resultats mais les valeurs ne correspondent pas. (marwa et mariam) J'ai reussis à faire afficher une petite partie du graphique malgré le problème avec les données. (marwa)
 * 01/02/2024 : On a refait le menu principal on y a rajouté le traitement -d1 -d2 -l -t -s en shell. (marwa et mariam) On essaye de trouver l'erreur du code en c du traitement t et s. ( marwa et mariam)  Traitement s, je le teste mais il met plus de 30 minutes afin qu'il s'affiche correctement avec le graphique.
-* 
+* 02/02/2024 : On a réussit à rectifier les erreurs qui étaient présentes dans les traitemnts -t et -s. 
 ## Ce qu'il reste à faire
 **Script Shell :**
-- [ ] Prendre en paramètres le chemin du fichier CSV d'entrée et les choix de traitement.
+- [x] Prendre en paramètres le chemin du fichier CSV d'entrée et les choix de traitement.
 - [x] Afficher un message d'aide si l'argument -h est présent.
 - [ ] Vérifier la présence de l'exécutable C sur le disque, le compiler si nécessaire, et traiter les erreurs.
 - [x] Vérifier la présence des dossiers temp et images, les créer s'ils n'existent pas.
 - [x] Vider le dossier temp avant l'exécution des traitements.
 - [x] Afficher la durée de chaque traitement en secondes.
 - [ ] Créer un graphique à partir des résultats obtenus du programme C.
-- [ ] Regrouper les traitements effectuern dans le menu principale
-- [ ] Dans le CyTrucks.sh mettre une fonction qui vérifie l'existence du fichier.csv
-- [ ] Traitements possibles :
+- [x] Regrouper les traitements effectuer dans le menu principale
+- [x] Dans le CyTrucks.sh mettre une fonction qui vérifie l'existence du fichier.csv
+- [x] Traitements possibles :
    - [x] **D1** Conducteurs avec le plus de trajets :
    - [x] créer un histogramme horizontal du -d1. (manque juste à afficher le prénom en meme temps que le nom)
    - [x] **D2** Conducteurs et la plus grande distance :
@@ -123,10 +125,10 @@ En tant que responsables d'une société nationale de transport routier, nous di
 
 **Programme C :**
 - [ ] Compiler le programme C avec un Makefile.
-- [ ] Définir les fonctionnalités du programme C en fonction des besoins du script Shell.
-- [ ] Prendre en charge les fichiers d'entrée et de sortie en tant qu'arguments (ou lire depuis l'entrée standard/sortie standard).
-- [ ] Retourner un code d'erreur strictement positif en cas de problème, 0 sinon.
-- [ ] Assurer la robustesse du code, libérer les allocations mémoires dans le cas nominal.
+- [x] Définir les fonctionnalités du programme C en fonction des besoins du script Shell.
+- [x] Prendre en charge les fichiers d'entrée et de sortie en tant qu'arguments (ou lire depuis l'entrée standard/sortie standard).
+- [x] Retourner un code d'erreur strictement positif en cas de problème, 0 sinon.
+- [x] Assurer la robustesse du code, libérer les allocations mémoires dans le cas nominal.
 - [ ] Limiter la taille mémoire utilisée en définissant des structures avec une empreinte minimale.
 - [ ] **T** Les 10 villes les plus traversées : créer un histogramme regroupé.
 - [ ] **S** Statistiques sur les étapes : créer un graphique de courbes min-max-moyenne.
@@ -152,17 +154,22 @@ Pour lancer le traitement -s, vous devez saisir votre terminal `./CyTrucks.sh da
 #### Traitement s: 
 
 
-
-
-
-  
-
+## Remarques: 
+- Pour le traitement S, dans le programme s'il affiche erreur lors de l'ouverture du fichier, il ne faut pas prendre en compte cette annotation car il execute tout de même le traitement.
+- En fonction de chaque traitement, le code génère des fichiers dans le dossiers temp où il y a les résultats attendus .
+- Lorsque l'on execute les options -d1, -d2, -l, nous avons les résultats sur le terminal, il faut ainsi aller dans le dossier image pour voir les résulats du graphique. 
 ## Difficultés rencontrées : 
 
 - Avant de commencer les traitements, nous avons mit un certain temps avant de comprendre le fichiers data.csv
-- Nous avons eu du mal a exécuter et compiler les traitemntrs T et S. Nous avons eu du mal à collecter les bonnes données.
-- Les traitements D2 et L fonctionnement mais ne respectent pas vraiment les 7 secondes ( à tester sur un ordinateur plus performent le temps sera sans doute respecté).
-- Nous avons eu du mal à générer les graphiques, nous avons puis seulement afficher les noms de familles sur le graphique d1 et d2.
-- Le traitement s met énormément de temps pour s'éxecuter.
+- Nous avons eu du mal a exécuter et compiler les traitemntrs -t et -s. Nous avons eu du mal à collecter les bonnes données.
+- Les traitements -d2 et -l fonctionnement mais ne respectent pas vraiment les 7 secondes ( à tester sur un ordinateur plus performent le temps sera sans doute respecté).
+- Nous avons eu du mal à générer les graphiques, nous avons puis seulement afficher les noms de familles sur le graphique -d1 et -d2.
+- Les traitements -t et -s ont beaucoup de mal à fonctionner avec la makefile c'est pourquoi pour qu'ils soient opérationnels nous avions dû les executer sans la makefile mais avec gcc.
+
+## Objectifs réussis : 
+
+- A deux c'était compliqué de réaliser tous les traitements, la partie graphique avec gnu plot ... , autrement dit tout le projet en amont des partiels mais nous avons réussis à bien nous répartir les     tâches et travailler dans les temps.
+- - Les traitements et options affichent bien ce qui a été demandée.
+- Les traitements -t et -s ont éte les plus durs à réaliser mais nous avons finalement réussis à les programmer. 
   
 
