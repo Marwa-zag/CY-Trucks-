@@ -29,21 +29,6 @@ check_and_create_directories() {
     fi
 }
 
-# Fonction pour compiler le programme C
-compile_c_program() {
-    cd "$progc_dir" || exit 1
-
-    if [ ! -f "mon_programme_c" ]; then
-        echo "Le programme C n'est pas compilé. Compilation en cours..."
-        make || { echo "Erreur lors de la compilation du programme C."; exit 1; }
-        echo "Compilation terminée avec succès."
-    else
-        echo "Le programme C est déjà compilé."
-    fi
-
-    cd - > /dev/null
-}
-
 # Fonction pour afficher l'aide
 display_help() {
     echo "Usage: $0 chemin_du_fichier_CSV [-d1 | -d2 | -l | -t | -s]"
@@ -57,29 +42,13 @@ display_help() {
     exit 1
 }
 
-# Traitement pour l'option -d1
-process_d1() {
-    # Extraction des noms et nombres de trajets
-    awk -F ';' '{print $8}' "$csv_file" | sort | uniq -c | sort -rn > "$temp_dir/temp_counted_data.txt"
-
-    # Sélection des 10 premiers conducteurs
-    head -n 10 "$temp_dir/temp_counted_data.txt" > "$temp_dir/top_10_drivers.txt"
-
-    # Création du graphique au format PNG avec gnuplot
-    gnuplot <<EOF
-set term png
-set output '$images_dir/top_10_drivers.png'
-set title "Top 10 Conducteurs avec le Plus de Trajets"
-set ylabel "Conducteurs"
-set xlabel "Nombre de Trajets"
-set style data histogram
-set style histogram rowstacked
-set style fill solid border -1
-set boxwidth 0.5
-plot '$temp_dir/top_10_drivers.txt' using 1:xticlabels(2) with boxes title "Nombre de Trajets"
-EOF
-
-    echo "Traitement D1 terminé."
+# Fonction pour mesurer le temps d'exécution d'une commande
+measure_execution_time() {
+    local start_time=$(date +%s)
+    "$@"
+    local end_time=$(date +%s)
+    local execution_time=$((end_time - start_time))
+    echo "Temps d'exécution : $execution_time secondes"
 }
 
 # Vérification des paramètres d'entrée
@@ -96,32 +65,192 @@ if [ "$csv_file" == "-h" ]; then
     display_help
 fi
 
-# Appel des fonctions pour vérifier et créer les dossiers, et compiler le programme C
+# Appel des fonctions pour vérifier et créer les dossiers
 check_and_create_directories
-compile_c_program
+
+# Timestamp de début
+heure_debut=$(date +%s)
 
 # Parcours des options passées en paramètres
 while [ "$2" != "" ]; do
     case $2 in
         -d1 )
-            # Appel de la fonction pour le traitement -d1
-            process_d1
+            # Traitement pour l'option -d1
+            echo "Traitement D1..."
+            
+            # Filtrer les lignes correspondant au numéro de trajet "1" dans le fichier CSV
+            grep ";1;" "$csv_file" > temp/temp.csv
+
+            # Compter le nombre de trajets par conducteur
+            awk -F';' '{count[$6]+=1} END {for (driver in count) print driver ";" count[driver]}' temp/temp.csv > temp/temp2.csv
+
+            # Trier la liste par ordre décroissant du nombre de trajets
+            sort -t';' -k2,2 -n -r temp/temp2.csv > temp/finaltemp.csv
+
+            # Récupérer les 10 premiers conducteurs ayant effectué le plus grand nombre de trajets
+            head -n 10 temp/finaltemp.csv > "$temp_dir/top_10_drivers.txt"
+
+            # Créer le fichier de données pour l'histogramme et trier les données par nombre de trajets décroissant
+            awk -v OFS=';' -F';' '{print $2, $1}' "$temp_dir/top_10_drivers.txt" | sort -t';' -k1,1nr | tac > "$temp_dir/histogram_data.csv"
+
+            # Générer l'histogramme horizontal avec gnuplot
+            gnuplot <<EOF
+set terminal pngcairo enhanced font 'arial,10' size 700, 600
+set output '$images_dir/top_10_drivers.png'
+set title "Top 10 Conducteurs avec le Plus de Trajets"
+set xlabel "Nombre de Trajets"
+set ylabel "Conducteurs"
+set style fill solid
+set yrange [-1:10]
+
+# Utiliser les noms des conducteurs comme étiquettes y
+set ytics nomirror
+plot '$temp_dir/histogram_data.csv' using (\$1*0.5):0:(\$1*0.5):(0.4):yticlabels(stringcolumn(2)) with boxxyerrorbars lc rgbcolor 'spring-green' notitle
+EOF
+
+            # Afficher les 10 conducteurs avec le plus de trajets
+            echo "Les 10 conducteurs avec le plus de trajets sont : "
+            cat "$temp_dir/top_10_drivers.txt"
+
+            # Nettoyer les fichiers temporaires
+            rm temp/temp.csv temp/temp2.csv temp/finaltemp.csv "$temp_dir/histogram_data.csv"
+
+            echo "Traitement D1 terminé."
             ;;
         -d2 )
             # Traitement pour l'option -d2
-            # ... (code pour le traitement -d2)
+            echo "Traitement D2..."
+
+            top_file="temp/top_10_driver_distances.csv"
+            histogram_data="temp/histogram_data_distances.csv"
+            output_image="images/top_10_driver_distances.png"
+
+            # Calculer la distance totale parcourue par chaque conducteur et récupérer les 10 premiers
+            awk -F';' 'NR>1 {total_distance[$6]+=$5} END {for (driver in total_distance) printf "%s;%f\n", driver, total_distance[driver]}' "$csv_file" \
+            | sort -t';' -k2,2 -n -r | head -n 10 > "$top_file"
+
+            # Créer le fichier de données pour l'histogramme
+            awk -v OFS=';' -F';' '{print $2, $1}' "$top_file" | sort -t';' -k1,1nr | tac > "$histogram_data"
+
+            # Générer l'histogramme horizontal avec gnuplot
+            gnuplot <<EOF
+set terminal pngcairo enhanced font 'arial,10' size 700, 600
+set output '$output_image'
+set title "Top 10 Conducteurs avec la Plus Grande Distance Parcourue"
+set xlabel "Distance (km)"
+set ylabel "Conducteurs"
+set style fill solid
+set yrange [-1:10]
+
+# Utiliser les noms des conducteurs comme étiquettes y
+set ytics nomirror
+plot '$histogram_data' using (\$1*0.5):0:(\$1*0.5):(0.4):yticlabels(stringcolumn(2)) with boxxyerrorbars lc rgbcolor 'spring-green' notitle
+EOF
+
+            # Afficher les 10 conducteurs avec la plus grande distance parcourue
+            echo "Les 10 conducteurs avec la plus grande distance parcourue sont : "
+            cat "$top_file"
+
+            # Nettoyer les fichiers temporaires
+            rm "$histogram_data" "$top_file"
+
+            echo "Traitement D2 terminé."
             ;;
         -l )
             # Traitement pour l'option -l
-            # ... (code pour le traitement -l)
+            echo "Traitement -l..."
+
+            top_distances_file="temp/top_10_distances.txt"
+
+            # Utiliser awk pour calculer les distances et les stocker dans un fichier temporaire
+            awk -F';' '{ distances[$1] += $5 } END { for (route_id in distances) print distances[route_id], route_id }' "$csv_file" | sort -k1,1nr | head -n 10 | sort -k2,2nr > "$top_distances_file"
+
+            # Générer le graphique avec gnuplot
+            gnuplot -persist <<EOF
+set terminal pngcairo enhanced font 'arial,10' size 700, 600
+set output 'images/top_10_distances.png'
+set title 'Top 10 Trajets avec les Plus Grandes Distances'
+set ylabel 'Distance (km)'
+set xlabel 'Trajets'
+set style fill solid
+set yrange [0:*]  # Ajustement de la plage y
+set boxwidth 0.7
+
+plot '$top_distances_file' using 1:xtic(2) with boxes lc rgbcolor 'spring-green' notitle
+EOF
+
+            # Afficher les 10 trajets avec les distances les plus grandes
+            echo "Les 10 trajets avec les distances les plus grandes sont : "
+            cat "$top_distances_file"
+
+            # Nettoyer les fichiers temporaires
+            rm "$top_distances_file"
+
+            echo "Traitement -l terminé."
             ;;
         -t )
             # Traitement pour l'option -t
-            # ... (code pour le traitement -t)
+            echo "Traitement -t..."
+
+            top_cities_file="temp/top_10_cities.txt"
+
+            # Utiliser awk pour compter le nombre de trajets passant par chaque ville
+            awk -F';' '{ cities[$3] += 1 } END { for (city in cities) print cities[city], city }' "$csv_file" | sort -k1,1nr | head -n 10 | sort -k2,2 > "$top_cities_file"
+
+            # Générer le graphique avec gnuplot
+            gnuplot -persist <<EOF
+set terminal pngcairo enhanced font 'arial,10' size 700, 600
+set output 'images/top_10_cities.png'
+set title 'Top 10 Villes les Plus Traversées'
+set ylabel 'Nombre de Trajets'
+set xlabel 'Villes'
+set style fill solid
+set yrange [0:*]  # Ajustement de la plage y
+set boxwidth 0.7
+
+plot '$top_cities_file' using 1:xtic(2) with boxes lc rgbcolor 'spring-green' notitle
+EOF
+
+            # Afficher les 10 villes les plus traversées
+            echo "Les 10 villes les plus traversées sont : "
+            cat "$top_cities_file"
+
+            # Nettoyer les fichiers temporaires
+            rm "$top_cities_file"
+
+            echo "Traitement -t terminé."
             ;;
         -s )
             # Traitement pour l'option -s
-            # ... (code pour le traitement -s)
+            echo "Traitement -s..."
+
+            steps_stats_file="temp/steps_stats.txt"
+
+            # Utiliser awk pour calculer les statistiques sur le nombre d'étapes
+            awk -F';' '{ steps[$4] += 1 } END { for (step in steps) print step, steps[step] }' "$csv_file" | sort -k2,2nr > "$steps_stats_file"
+
+            # Générer le graphique avec gnuplot
+            gnuplot -persist <<EOF
+set terminal pngcairo enhanced font 'arial,10' size 700, 600
+set output 'images/steps_stats.png'
+set title 'Statistiques sur le Nombre d\'Étapes'
+set ylabel 'Nombre d\'Étapes'
+set xlabel 'Étapes'
+set style fill solid
+set yrange [0:*]  # Ajustement de la plage y
+set boxwidth 0.7
+
+plot '$steps_stats_file' using 2:xtic(1) with boxes lc rgbcolor 'spring-green' notitle
+EOF
+
+            # Afficher les statistiques sur le nombre d'étapes
+            echo "Statistiques sur le nombre d'étapes : "
+            cat "$steps_stats_file"
+
+            # Nettoyer les fichiers temporaires
+            rm "$steps_stats_file"
+
+            echo "Traitement -s terminé."
             ;;
         * )
             echo "Option invalide : $2"
@@ -130,3 +259,12 @@ while [ "$2" != "" ]; do
     esac
     shift
 done
+
+# Timestamp de fin
+heure_fin=$(date +%s)
+
+# Calcul de la durée d'exécution
+duree=$((heure_fin - heure_debut))
+
+# Affichage de la durée d'exécution
+echo "Temps d'exécution : $duree secondes"
