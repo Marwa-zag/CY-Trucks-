@@ -44,8 +44,8 @@ En tant que responsables d'une société nationale de transport routier, nous di
 
   ## Apercu de la création des différents dossiers:
 
-![Uploading creation_dossier.PNG.]()
 
+![creation_dossier](https://github.com/Marwa-zag/CY-Trucks-/assets/131532539/f92d6ac8-f8f3-4173-bacb-977c3a2b4d31)
 
 
 
@@ -53,8 +53,8 @@ En tant que responsables d'une société nationale de transport routier, nous di
 
   - Afin d'afficher la fonction d'aide, il suffit d'éxecuter sur le terminal `./CyTrucks.sh -h`
 
- ![Uploading fonction_aide.PNG.]()
-
+    
+![fonction_aide(2)](https://github.com/Marwa-zag/CY-Trucks-/assets/131532539/1592a831-f8f0-4b4c-95b9-49c2950522ee)
 
 
 
