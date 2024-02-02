@@ -160,7 +160,7 @@ Pour lancer le traitement -s, vous devez saisir votre terminal `./CyTrucks.sh da
 
 
 ## Remarques: 
-- Pour le traitement S, dans le programme s'il affiche erreur lors de l'ouverture du fichier, il ne faut pas prendre en compte cette annotation car il execute tout de même le traitement.
+- Pour le traitement S, dans le programme s'il affiche erreur lors de l'ouverture du fichier, il ne faut pas prendre en compte cette annotation car il execute tout de même le traitement. 
 - En fonction de chaque traitement, le code génère des fichiers dans le dossiers temp où il y a les résultats attendus .
 - Lorsque l'on execute les options -d1, -d2, -l, nous avons les résultats sur le terminal, il faut ainsi aller dans le dossier image pour voir les résulats du graphique.
 - Dans les consignes ils nous demandent de donner de déposer le planning de notre travail et la répartition des tâches en pdf, tout est indiqué dans le readme. 
