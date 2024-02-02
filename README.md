@@ -1,7 +1,7 @@
 # CY-Trucks-
-Mariam Kardallas
-Marwa ZAGLIZ
-Préing2 MEF1
+##### Mariam Kardallas
+##### Marwa ZAGLIZ
+##### Préing2 MEF1
 
 En tant que responsables d'une société nationale de transport routier, nous disposons d'un outil de gestion logistique. Cependant, les données recueillies sont bien trop volumineuses et mélangées pour être traitées manuellement. Notre objectif est donc de développer un programme afin de présenter de manière globale les activités de Cy Trucks, en fournissant des analyses claires et des graphiques récapitulatifs pour faciliter la compréhension de notre activité logistique.
 
@@ -28,7 +28,7 @@ En tant que responsables d'une société nationale de transport routier, nous di
    
                                 `sudo dos2unix CyTrucks.sh`
 
-   - Enfin :
+ - Enfin :
      
                                 `./CyTrucks.sh` (à partir de là vous pouvez lui donner n'imporque quel traitement)
   
